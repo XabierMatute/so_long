@@ -6,16 +6,15 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/01 17:30:09 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/01 18:34:13 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := so_long
 
-SRC := main.c  Errors/error_argc.c
+SRC :=	main.c  \
+		Errors/error_argc.c
 OBJ := $(SRC:%.c=%.o)
-
-LIB := ./ft_printf
 
 CC 		:= gcc
 # CFLAGS 	:= -Wall -Werror -Wextra
@@ -29,17 +28,20 @@ val 	:=  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	make -C $(LIB)
-	$(CC) $(CFLAGS) $(OBJ) $(LIB)/*.a  -o $(NAME)
+	make -C libft
+	make -C ft_printf
+	$(CC) $(CFLAGS) $(OBJ) ft_printf/libftprintf.a ft_printf/libftprintf.a -o $(NAME)
 
 clean :
 		$(RM) $(OBJ)
-		make clean -C $(LIB)
+		make clean -C libft
+		make clean -C ft_printf
 
 fclean : clean
-		make fclean -C $(LIB)
+		make fclean -C libft
+		make fclean -C ft_printf
 		$(RM) $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean re flagless
+.PHONY : all clean fclean re
