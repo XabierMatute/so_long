@@ -6,11 +6,11 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/01 12:06:13 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/01 12:12:01 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-$(NAME) = so_long
+NAME := so_long
 
 CC 		:= gcc
 CFLAGS 	:= -Wall -Werror -Wextra
@@ -24,7 +24,11 @@ all : $(NAME)
 
 $(NAME) : 
 	make -C ft_printf
-	$(CC) $(CFLAGS) main.c ft_printf/libftprintf.a  -o server
+	$(CC) $(CFLAGS) main.c ft_printf/libftprintf.a  -o $(NAME)
+
+flagless :
+	make -C ft_printf
+	$(CC) main.c ft_printf/libftprintf.a  -o $(NAME)
 
 clean :
 		$(RM) $(NAME)
@@ -35,4 +39,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re flagless
