@@ -6,7 +6,13 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 15:43:35 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/01 15:43:36 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:03:08 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	argvparse(char	*argv)
+{
+	if (!dotber(argv))
+		error_dotber(argv);
+	berparse(argv);
+}
