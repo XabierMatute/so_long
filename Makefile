@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/02 16:24:51 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/02 16:35:57 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC :=	main.c  \
 OBJ := $(SRC:%.c=%.o)
 
 CC 		:= gcc
-# CFLAGS 	:= -Wall -Werror -Wextra
+CFLAGS 	:= -Wall -Werror -Wextra
 
 RM 		:= rm -rf
 
@@ -33,7 +33,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	make -C libft
 	make -C ft_printf
-	$(CC) $(CFLAGS) $(OBJ) ft_printf/libftprintf.a ft_printf/libftprintf.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) ft_printf/libftprintf.a libft/libft.a -o $(NAME)
 
 clean :
 		$(RM) $(OBJ)
