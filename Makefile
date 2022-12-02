@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/01 18:42:35 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/02 16:24:51 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME := so_long
 
 SRC :=	main.c  \
 		Errors/error_argc.c \
+		Errors/error_dotber.c \
 		Parse/argvparse.c \
 		
 OBJ := $(SRC:%.c=%.o)
