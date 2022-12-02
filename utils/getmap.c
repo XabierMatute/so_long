@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 17:35:04 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/02 18:53:16 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/02 22:02:38 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,41 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-char	*getmap(int fd)
+int	mapsize(int fd)
 {
 	char	*c;
+	ssize_t	r;
+	size_t	i;
+
+	i = 0;
+	c = 0;
+	r = read(fd, c, 1);
+	while (r == 1 && *c)
+	{
+		r = read(fd, c, 1);
+		i++;
+	}
+	close(fd);
+	return(i);
+}
+
+char	*getmap(int fd, size_t	size)
+{
+	char	c;
 	ssize_t	r;
 	char	*map;
 	size_t	i;
 
-	map = ft_calloc(sizeof(char), mapsize(fd));
+	map = ft_calloc(sizeof(char), size + 1);
 	i = 0;
-	r = read(fd, c, 1);
-	while (r == 1 && *c)
+	r = read(fd, &c, 1);
+	while (r == 1 && c)
 	{
-		map[i] = *c;
-		r = read(fd, c, 1);
+		map[i] = c;
+		r = read(fd, &c, 1);
 		i++;
 	}
+	close(fd);
 	map[i] = 0;
 	return(map);
 }
