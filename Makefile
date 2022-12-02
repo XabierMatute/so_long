@@ -6,15 +6,16 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/02 17:35:32 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/02 17:50:56 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := so_long
 
 SRC :=	main.c  \
-		Errors/error_argc.c \
-		Errors/error_dotber.c \
+		Errors/error_argc.c       \
+		Errors/error_dotber.c     \
+		Errors/error_unreadable.c \
 		Parse/argvparse.c \
 		utils/getmap.c \
 		
