@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_charnum.c                                    :+:      :+:    :+:   */
+/*   error_rectangle.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 14:44:00 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/04 16:50:25 by xmatute-         ###   ########.fr       */
+/*   Created: 2022/12/04 16:18:55 by xmatute-          #+#    #+#             */
+/*   Updated: 2022/12/04 16:22:14 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int				ft_printf(char const *s, ...);
 void 			exit(int status);
 
-void	error_exit(int n)
+void	error_rectangle(char	*map)
 {
-	ft_printf("Error\nDebe haber una sola salida 'E' en el mapa (hay %i)\n", n);
-	exit(-1);
-}
-
-void	error_inipos(int n)
-{
-	ft_printf("Error\nDebe haber una sola posición inicial 'P' en el mapa (hay %i)\n", n);
-	exit(-1);
-}
-
-void	error_collectable(void)
-{
-	ft_printf("Error\nDebe haber al menos un coleccionable 'C' en el mapa\n");
+	ft_printf("Error\nEl mapa no es un rectangulo\n%s", map);
 	exit(-1);
 }
