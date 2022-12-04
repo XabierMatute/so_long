@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/04 15:24:49 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/04 16:26:24 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC :=	main.c  \
 		Errors/error_unreadable.c  \
 		Errors/error_invalidchar.c \
 		Errors/error_charnum.c     \
+		Errors/error_rectangle.c   \
 		Parse/argvparse.c \
 		Parse/mapparse.c  \
 		Parse/map/invalidchar.c \
