@@ -6,10 +6,13 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 14:33:18 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/04 14:45:02 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:51:36 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	error_exit(int n);
+void	error_inipos(int n);
+void	error_collectable(void);
 
 unsigned int	charnum(char *map, char c)
 {
