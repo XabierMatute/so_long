@@ -6,9 +6,11 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 14:04:16 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/04 14:16:18 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:29:13 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	error_invalidchar(char c);
 
 int	validchar(char c)
 {
@@ -21,6 +23,8 @@ int	validchar(char c)
 	if (c == 'E')
 		return (1);
 	if (c == 'P')
+		return (1);
+	if (c == '\n')
 		return (1);
 	return (0);
 }
