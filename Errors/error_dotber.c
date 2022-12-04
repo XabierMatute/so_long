@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:22:26 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/04 14:18:56 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/04 15:06:16 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ void 			exit(int status);
 
 void	error_dotber(char *argv)
 {
-	ft_printf("Error\n%s no es un archivo .ber\n", argv);
+	ft_printf("Error\n\"%s\" no es un archivo .ber\n", argv);
 	exit(-1);
 }

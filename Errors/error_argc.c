@@ -13,7 +13,7 @@ int				ft_printf(char const *s, ...);
 
 int	error_argc(int argc)
 {
-	ft_printf("Error\nhas introducido %i argumentos,", argc - 1);
+	ft_printf("Error\nHas introducido %i argumentos,", argc - 1);
 	ft_printf(" introduce por favor un unico argumento (mapname.ber)\n");
 	return (-1);
 }
