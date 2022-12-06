@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/04 16:58:31 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/06 12:10:29 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC :=	main.c  \
 		Parse/map/closed.c      \
 		utils/getmap.c  \
 		utils/linelen.c \
+		utils/p.c		\
 		
 OBJ := $(SRC:%.c=%.o)
 
