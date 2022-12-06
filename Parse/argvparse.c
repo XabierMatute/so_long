@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 15:43:35 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 12:07:28 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/06 20:49:14 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	berparse(char *ber)
 		error_unreadable(ber);
 	fd1 = open(ber, O_RDONLY);
 	fd2 = open(ber, O_RDONLY);
-	parsemap(getmap(fd1, mapsize(fd2)));
+	parsemap(getmap(fd2, mapsize(fd1)));
 	//ft_printf("%s\n", getmap(fd1, mapsize(fd2)));
 }
 

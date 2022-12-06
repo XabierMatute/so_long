@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/06 17:54:53 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/06 21:34:22 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,24 +20,29 @@ SRC :=	main.c  \
 		Errors/error_charnum.c     	\
 		Errors/error_rectangle.c   	\
 		Errors/error_closed.c		\
+		Errors/error_path.c			\
 		Parse/argvparse.c \
 		Parse/mapparse.c  \
 		Parse/map/invalidchar.c \
 		Parse/map/charnum.c     \
 		Parse/map/rectangle.c   \
 		Parse/map/closed.c      \
+		Parse/map/path.c		\
 		utils/getmap.c  \
 		utils/linelen.c \
 		utils/p.c		\
+		utils/mapend.c
 		
 OBJ := $(SRC:%.c=%.o)
 
+SANI 	:= -fsanitize=address -g3
+
 CC 		:= gcc
-CFLAGS 	:= -Wall -Werror -Wextra
+CFLAGS 	:= -Wall -Werror -Wextra 
+# CFLAGS 	:= -Wall -Werror -Wextra $(SANI)
 
 RM 		:= rm -rf
 
-SANI 	:= -fsanitize=address -g3
 val 	:=  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
 
 

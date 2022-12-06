@@ -6,13 +6,13 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:56:09 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 13:42:48 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/06 18:26:47 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../so_long.h"
 
-void	error_closed(char	*map);
+void	error_closed(char	**map);
 
 static	int	cu(char	*m)
 {
@@ -77,5 +77,5 @@ static	int	cr(char	*m)
 void	checkclosed(char *map)
 {
 	if (!cu(map) || !cd(map) || !cl(map) || !cr(map))
-		error_closed(map);
+		error_closed(&map);
 }
