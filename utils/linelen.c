@@ -6,11 +6,11 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 15:24:15 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/04 15:26:54 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/06 11:34:08 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	linelen(const char *s)
+int	linelen(const char *s)
 {
 	int	l;
 
