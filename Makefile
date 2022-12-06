@@ -6,19 +6,20 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/06 12:10:29 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/06 17:54:53 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := so_long
 
 SRC :=	main.c  \
-		Errors/error_argc.c        \
-		Errors/error_dotber.c      \
-		Errors/error_unreadable.c  \
-		Errors/error_invalidchar.c \
-		Errors/error_charnum.c     \
-		Errors/error_rectangle.c   \
+		Errors/error_argc.c         \
+		Errors/error_dotber.c      	\
+		Errors/error_unreadable.c  	\
+		Errors/error_invalidchar.c 	\
+		Errors/error_charnum.c     	\
+		Errors/error_rectangle.c   	\
+		Errors/error_closed.c		\
 		Parse/argvparse.c \
 		Parse/mapparse.c  \
 		Parse/map/invalidchar.c \
