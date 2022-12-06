@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:56:09 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 13:25:38 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/06 13:42:48 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static	int	cr(char	*m)
 	int w;
 
 	i = 0;
-	w = w = linelen(s);
+	w = linelen(m) - 1;
 	while (p(m, w, i))
 	{
 		if (p(m, w, i) != '1')
