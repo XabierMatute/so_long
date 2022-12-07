@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 17:35:04 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 21:19:40 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/07 21:08:29 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,24 @@ size_t	mapsize(int fd)
 	return(i);
 }
 
+char	*ensuren(char **m)
+{
+	char	*n;
+	char	*a;
+	
+
+	if (m[0][ft_strlen(*m) - 1] == '\n')
+		return (*m);
+	n = ft_strdup("\n");
+	a = *m;
+	if (!n || !a)
+		exit(-5);
+	*m = ft_strjoin(a, n);
+	free(a);
+	free(n);
+	return (*m);
+}
+
 char	*getmap(int fd, size_t	size)
 {
 	char	c;
@@ -52,5 +70,6 @@ char	*getmap(int fd, size_t	size)
 	}
 	close(fd);
 	map[i] = 0;
+	map = ensuren(&map);
 	return(map);
 }
