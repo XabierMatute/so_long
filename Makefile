@@ -6,13 +6,14 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 11:58:22 by xmatute-          #+#    #+#              #
-#    Updated: 2022/12/06 21:34:22 by xmatute-         ###   ########.fr        #
+#    Updated: 2022/12/09 12:19:42 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := so_long
 
 SRC :=	main.c  \
+		game.c  \
 		Errors/error_argc.c         \
 		Errors/error_dotber.c      	\
 		Errors/error_unreadable.c  	\
@@ -31,14 +32,17 @@ SRC :=	main.c  \
 		utils/getmap.c  \
 		utils/linelen.c \
 		utils/p.c		\
-		utils/mapend.c
+		utils/showmap.c \
+		utils/move.c	\
+		utils/mapend.c	\
+		utils/gameover.c
 		
 OBJ := $(SRC:%.c=%.o)
 
 SANI 	:= -fsanitize=address -g3
 
 CC 		:= gcc
-CFLAGS 	:= -Wall -Werror -Wextra 
+CFLAGS 	:= -Wall  -Wextra -Werror
 # CFLAGS 	:= -Wall -Werror -Wextra $(SANI)
 
 RM 		:= rm -rf
@@ -51,12 +55,15 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	make -C libft
 	make -C ft_printf
-	$(CC) $(CFLAGS) $(OBJ) ft_printf/libftprintf.a libft/libft.a -o $(NAME)
+	$(MAKE) -C mlx 2> logs
+	rm -f logs
+	$(CC) $(CFLAGS) -Lmlx -lmlx -framework OpenGL -framework AppKit -Imlx $(OBJ) ft_printf/libftprintf.a libft/libft.a mlx/libmlx.a -o $(NAME)
 
 clean :
 		$(RM) $(OBJ)
 		make clean -C libft
 		make clean -C ft_printf
+		make clean -C mlx
 
 fclean : clean
 		make fclean -C libft
