@@ -6,16 +6,17 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 15:43:35 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 20:49:14 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:32:38 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include <fcntl.h>
-int	error_dotber(char *argv);
+
+int		error_dotber(char *argv);
 void	error_unreadable(char *ber);
 char	*getmap(int fd, size_t	size);
-int	mapsize(int fd);
+int		mapsize(int fd);
 void	parsemap(char	*map);
 
 int	readable(char	*ber)
@@ -27,12 +28,12 @@ int	readable(char	*ber)
 	if (fd < 3)
 	{
 		close(fd);
-		return(0);
+		return (0);
 	}
 	if (read(fd, s, 40) < 1)
 	{
 		close(fd);
-		return(0);
+		return (0);
 	}
 	close(fd);
 	return (1);
@@ -48,11 +49,9 @@ void	berparse(char *ber)
 	fd1 = open(ber, O_RDONLY);
 	fd2 = open(ber, O_RDONLY);
 	parsemap(getmap(fd2, mapsize(fd1)));
-	//ft_printf("%s\n", getmap(fd1, mapsize(fd2)));
 }
 
-
-int		dotber(char	*argv)
+int	dotber(char	*argv)
 {
 	if (argv)
 	{

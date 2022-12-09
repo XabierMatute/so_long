@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:56:09 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 18:26:47 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:34:09 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static	int	cl(char	*m)
 static	int	cr(char	*m)
 {
 	int	i;
-	int w;
+	int	w;
 
 	i = 0;
 	w = linelen(m) - 1;

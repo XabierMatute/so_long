@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 15:19:52 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 18:26:27 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:35:10 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	rectangle(char *map)
 	map += width + 1;
 	while (*map)
 	{
-		if	(linelen(map) != width)
+		if (linelen(map) != width)
 			return (0);
 		map += width + 1;
 	}
