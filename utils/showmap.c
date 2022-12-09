@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 14:03:33 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/08 14:21:27 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:42:24 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 
 void	puttile(char c, int x, int y, t_mlx *e)
 {
-	if (c == 'o')
-		mlx_put_image_to_window(e->mlx, e->w, e->o, x * S, y * S);
-	if (c == 'l')
-		mlx_put_image_to_window(e->mlx, e->w, e->l, x * S, y * S);	
-	if (c == 'c')
+	mlx_put_image_to_window(e->mlx, e->w, e->o, x * S, y * S);
+	if (c == '1')
+		mlx_put_image_to_window(e->mlx, e->w, e->l, x * S, y * S);
+	if (c == 'C')
 		mlx_put_image_to_window(e->mlx, e->w, e->c, x * S, y * S);
-	if (c == 'e')
+	if (c == 'E')
 		mlx_put_image_to_window(e->mlx, e->w, e->e, x * S, y * S);
-	if (c == 'p')
+	if (c == 'P')
 		mlx_put_image_to_window(e->mlx, e->w, e->p, x * S, y * S);
-	
 }
 
-void	showmap(char *m, t_mlx *e)
+void	showmap(t_mlx *e)
 {
 	int	i;
 	int	j;
 
 	j = 0;
-	while (p(m, 0, j))
+	while (p(e->m, 0, j))
 	{
 		i = 0;
-		while (p(m, i, j))
+		while (p(e->m, i, j))
 		{
-			puttile(p(m, i, j), i, j, e);
+			puttile(p(e->m, i, j), i, j, e);
+			i++;
 		}
 		j++;
 	}

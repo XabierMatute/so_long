@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 15:24:15 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 13:17:33 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:40:12 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	columlen(const char *s)
 	l = 0;
 	while (s[l] && s[l] != '\n')
 		l += w;
-	return (l/w - 1);
+	return (l / w - 1);
 }

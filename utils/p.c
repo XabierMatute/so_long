@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:30:13 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 20:10:04 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:42:09 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	p(char *m, int x, int y)
 		if (*m == 0 || *m == '\n')
 			return (0);
 	}
-	return (*m);	
+	return (*m);
 }
 
 char	*pp(char *m, int x, int y)
@@ -57,7 +57,7 @@ char	*pp(char *m, int x, int y)
 		if (*m == 0 || *m == '\n')
 			return (0);
 	}
-	return (m);	
+	return (m);
 }
 
 int	x(char *m, char c)
@@ -73,7 +73,7 @@ int	x(char *m, char c)
 		{
 			if (p(m, x, j) == c)
 			{
-				return(x);
+				return (x);
 			}
 			x++;
 		}
@@ -96,7 +96,7 @@ int	y(char *m, char c)
 		{
 			if (p(m, i, y) == c)
 			{
-				return(y);
+				return (y);
 			}
 			i++;
 		}

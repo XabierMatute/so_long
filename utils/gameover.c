@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mapend.c                                           :+:      :+:    :+:   */
+/*   gameover.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 18:10:50 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/09 12:40:51 by xmatute-         ###   ########.fr       */
+/*   Created: 2022/12/09 11:49:04 by xmatute-          #+#    #+#             */
+/*   Updated: 2022/12/09 12:39:11 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../so_long.h"
 
-void	exit(int status);
-
-void	mapend(char **map)
+void	freep(void *p)
 {
-	if (*map)
-		free(*map);
-	exit(-1);
+	if (p)
+	{
+		free(p);
+		p = 0;
+	}
+}
+
+void	gameover(t_mlx *e)
+{
+	freep(e->mlx);
+	freep(e->m);
+	freep(e->w);
+	freep(e->o);
+	freep(e->l);
+	freep(e->c);
+	freep(e->e);
+	freep(e->p);
+	exit(0);
 }
