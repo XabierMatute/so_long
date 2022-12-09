@@ -6,12 +6,12 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 21:28:46 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 21:29:45 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:17:05 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int				ft_printf(char const *s, ...);
-void 			exit(int status);
+void			exit(int status);
 void			mapend(char **map);
 
 void	error_path(char	**map)

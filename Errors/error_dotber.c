@@ -6,12 +6,12 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:22:26 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 18:08:44 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:13:40 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int				ft_printf(char const *s, ...);
-void 			exit(int status);
+void			exit(int status);
 
 void	error_dotber(char *argv)
 {

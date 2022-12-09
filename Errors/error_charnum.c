@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 14:44:00 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/06 18:09:34 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:10:52 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	error_exit(int n, char **map)
 
 void	error_inipos(int n, char **map)
 {
-	ft_printf("Error\nDebe haber una sola posición inicial 'P' en el mapa (hay %i)\n", n);
+	ft_printf("Error\nDebe haber una sola posición inicial 'P' en el mapa");
+	ft_printf(" (hay %i)\n", n);
 	mapend(map);
 }
 
