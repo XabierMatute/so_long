@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 15:37:01 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/09 12:53:26 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:30:15 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ typedef struct s_mlx
 	void			*p;
 }					t_mlx;
 
-int				mapsize(int fd);
+size_t			mapsize(int fd);
 char			*getmap(int fd, size_t	size);
 void			mapend(char **map);
 void			showmap(t_mlx *e);
 void			gameover(t_mlx *e);
+void			freep(void *p);
 unsigned int	charnum(char *map, char c);
 int				linelen(const char *s);
 int				columlen(const char *s);

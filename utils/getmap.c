@@ -6,13 +6,12 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 17:35:04 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/12/09 12:39:54 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:29:45 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "../so_long.h"
 #include <fcntl.h>
-#include <unistd.h>
 
 size_t	mapsize(int fd)
 {
@@ -44,8 +43,8 @@ char	*ensuren(char **m)
 	if (!n || !a)
 		exit(-5);
 	*m = ft_strjoin(a, n);
-	free(a);
-	free(n);
+	freep(a);
+	freep(n);
 	return (*m);
 }
 
